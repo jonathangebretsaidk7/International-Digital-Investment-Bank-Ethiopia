@@ -1,1 +1,318 @@
-# International-Digital-Investment-Bank-Ethiopia
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>International Digital Investment Bank</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    header nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .tabs {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      margin-right: 20px;
+      padding: 15px;
+      background-color: #e6f0ff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .tab:hover {
+      background-color: #cce0ff;
+    }
+
+    h1, h2, h3 {
+      color: #003366;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0050a0;
+    }
+
+    .calculator input, .calculator select {
+      padding: 10px;
+      margin: 10px 0;
+      width: 200px;
+    }
+
+    .calculator button {
+      width: 220px;
+    }
+
+    .exchange-rates {
+      padding: 15px;
+      background-color: #e6f0ff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+
+    #homepage {
+      text-align: center;
+      padding: 40px 0;
+      background-color: #f1f1f1;
+    }
+
+    #homepage img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .tab img {
+      width: 100%;
+      height: 200px;
+      border-radius: 5px;
+    }
+
+    .currency-image {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#homepage">Home</a></li>
+        <li><a href="#esx-market" onclick="showTab('esx-market')">ESX Market</a></li>
+        <li><a href="#trading-calendar" onclick="showTab('trading-calendar')">Trading Calendar</a></li>
+        <li><a href="#telebirr" onclick="showTab('telebirr')">TeleBirr</a></li>
+        <li><a href="#currency-exchange" onclick="showTab('currency-exchange')">Foreign Currency Exchange</a></li>
+        <li><a href="#calculator" onclick="showTab('calculator')">Investment Calculator</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Homepage Section -->
+    <section id="homepage">
+      <h1>Welcome to International Digital Investment Bank</h1>
+      <img src="https://via.placeholder.com/1200x500" alt="Investment Bank Overview Image">
+      <p>Your trusted platform for digital investment and foreign exchange services in Ethiopia.</p>
+    </section>
+
+    <!-- ESX Market Section -->
+    <section id="esx-market" class="tab-content">
+      <h1>ESX Market</h1>
+      <div class="tabs">
+        <div class="tab" onclick="showTabContent('trading-system')">
+          <img src="https://via.placeholder.com/300x200" alt="Trading System">
+          <p>Trading System</p>
+        </div>
+        <div class="tab" onclick="showTabContent('market-surveillance')">
+          <img src="https://via.placeholder.com/300x200" alt="Market Surveillance">
+          <p>Market Surveillance</p>
+        </div>
+      </div>
+
+      <div id="trading-system" class="tab-content">
+        <h2>Trading System</h2>
+        <p>All trading activity on ESX listed securities occurs via ESX’s Automated Trading System (ATS). ESX adopts a hybrid market that provides both a central limit order book as well as platforms for bilateral and multilateral negotiated trading in the form of Requests for Quotes (RFQs). ESX’s central limit order book allows trading members and their clients to enter buy and sell orders anonymously where customer trades are executed using ESXs’ modern trading engine based on a transparent price-time priority mechanism of trade matching.</p>
+        <h3>Trading Operations</h3>
+        <ul>
+          <li><strong>Market Opening:</strong> Trading on ESX begins with an opening auction. During this phase, buy and sell orders are matched, and the opening price for each security is determined.</li>
+          <li><strong>Order Placement:</strong> Investors place buy and sell orders with their brokerage firms or directly via direct market access facilities. Orders can be market orders or limit orders.</li>
+          <li><strong>Order Matching:</strong> ESX uses electronic trading systems to match buy and sell orders based on price-time priority.</li>
+        </ul>
+      </div>
+
+      <div id="market-surveillance" class="tab-content">
+        <h2>Market Surveillance</h2>
+        <p>ESX utilizes various surveillance mechanisms to monitor trading activity and detect unusual or suspicious behavior, helping maintain market integrity and prevent market manipulation.</p>
+      </div>
+    </section>
+
+    <!-- Trading Calendar Section -->
+    <section id="trading-calendar" class="tab-content">
+      <h1>Trading Calendar</h1>
+      <h3>Market Hours</h3>
+      <table>
+        <tr><th>Session</th><th>Time</th><th>Price Limit</th></tr>
+        <tr><td>Pre-open</td><td>9:00 AM – 9:30 AM</td><td>–</td></tr>
+        <tr><td>Continuous</td><td>9:30 AM – 3:00 PM</td><td>–</td></tr>
+        <tr><td>Close</td><td>3:00 PM</td><td>–</td></tr>
+      </table>
+     
+      <h3>Public Holidays / Closing Days (2024 -2025)</h3>
+      <table>
+        <tr><th>Date</th><th>Holiday</th></tr>
+        <tr><td>January 7</td><td>Ethiopian Christmas / Gena</td></tr>
+        <tr><td>January 19</td><td>Epiphany/Timket</td></tr>
+        <tr><td>March 2</td><td>Adwa Victory Day</td></tr>
+        <tr><td>March 8</td><td>International Women's Day</td></tr>
+        <tr><td>March 31</td><td>Eid al-Fitr</td></tr>
+        <tr><td>May 1</td><td>International Labor Day</td></tr>
+        <tr><td>May 5</td><td>Patriots' Victory Day</td></tr>
+        <tr><td>May 28</td><td>Derg Downfall Day</td></tr>
+        <tr><td>September 11</td><td>Ethiopian New Year</td></tr>
+      </table>
+    </section>
+
+    <!-- TeleBirr Section -->
+    <section id="telebirr" class="tab-content">
+      <h1>TeleBirr Digital Currency</h1>
+      <img src="https://via.placeholder.com/800x400" alt="TeleBirr Digital Currency">
+      <p>Telebirr is a digital cash service that enables you to access a variety of financial services with convenience via your mobile phone without needing a bank account. It enables cashless payments, reduces dependency on cash, and allows you to track transaction records for enhanced financial security.</p>
+      <h3>How Safe is Your Money?</h3>
+      <ul>
+        <li>Protected by secure PIN that should not be shared.</li>
+        <li>State-of-the-art mobile money solution deployed for security.</li>
+        <li>Fraud management system that detects and handles suspicious activities.</li>
+      </ul>
+    </section>
+
+    <!-- Foreign Currency Exchange Section -->
+    <section id="currency-exchange" class="tab-content">
+      <h1>Foreign Currency Exchange</h1>
+      <div class="exchange-rates">
+        <h3>Latest Exchange Rates</h3>
+        <table>
+          <tr><th>Currency</th><th>Cash Buying</th><th>Cash Selling</th><th>Transactional Buying</th><th>Transactional Selling</th></tr>
+          <tr><td><img class="currency-image" src="https://via.placeholder.com/50" alt="USD">USD</td><td>124.0086</td><td>126.4888</td><td>124.0086</td><td>126.4888</td></tr>
+          <tr><td><img class="currency-image" src="https://via.placeholder.com/50" alt="GBP">GBP</td><td>152.3866</td><td>155.4343</td><td>155.2836</td><td>158.3892</td></tr>
+          <tr><td><img class="currency-image" src="https://via.placeholder.com/50" alt="EUR">EUR</td><td>128.3365</td><td>130.9032</td><td>128.3365</td><td>130.9032</td></tr>
+          <tr><td><img class="currency-image" src="https://via.placeholder.com/50" alt="CHF">CHF</td><td>134.1436</td><td>136.8265</td><td>136.6938</td><td>139.4277</td></tr>
+          <tr><td><img class="currency-image" src="https://via.placeholder.com/50" alt="SEK">SEK</td><td>11.0023</td><td>11.2223</td><td>11.2114</td><td>11.4357</td></tr>
+          <!-- Add more rows for other currencies as needed -->
+        </table>
+      </div>
+    </section>
+
+    <!-- Investment Calculator Section -->
+    <section id="calculator" class="tab-content calculator">
+      <h1>Investment Calculator</h1>
+      <p>Use the calculator to determine the value of your investment in multiple currencies.</p>
+      <label for="amount">Investment Amount (TeleBirr):</label>
+      <input type="number" id="amount" placeholder="Enter amount in TeleBirr">
+
+      <label for="currency">Select Currency:</label>
+      <select id="currency">
+        <option value="USD">USD</option>
+        <option value="GBP">GBP</option>
+        <option value="EUR">EUR</option>
+        <option value="CHF">CHF</option>
+        <option value="SEK">SEK</option>
+        <!-- Add more currencies as needed -->
+      </select>
+
+      <button onclick="calculateInvestment()">Calculate Investment</button>
+
+      <p id="result"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 International Digital Investment Bank. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function showTab(tab) {
+      const sections = document.querySelectorAll('.tab-content');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(tab).classList.add('active');
+    }
+
+    function calculateInvestment() {
+      const amount = parseFloat(document.getElementById('amount').value);
+      const currency = document.getElementById('currency').value;
+
+      const exchangeRates = {
+        "USD": 124.0086,
+        "GBP": 152.3866,
+        "EUR": 128.3365,
+        "CHF": 134.1436,
+        "SEK": 11.0023
+        // Add more currencies as needed
+      };
+
+      const rate = exchangeRates[currency];
+      const result = amount * rate;
+
+      document.getElementById('result').innerText = `Your investment of ${amount} TeleBirr is equivalent to ${result.toFixed(2)} ${currency}.`;
+    }
+
+    showTab('homepage');
+  </script>
+</body>
+</html>
